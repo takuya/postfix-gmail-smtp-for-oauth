@@ -35,6 +35,14 @@ docker build -t $IMAGE .
 - Ubuntu 20.04
 - ppa:sasl-xoauth2/stable
 
+## TODO
+
+- docker images 
+  - [ ] testing
+  - [ ] file to environment
+  - [x] auto build image
+
+
 ## references 
 
 - https://github.com/tarickb/sasl-xoauth2
