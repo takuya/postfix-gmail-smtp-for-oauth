@@ -2,8 +2,10 @@
 
 postfix enabled xoauth2 in docker
 
-This postfix is for gmail.
-Postfix will send mail by smart relay via `smtp-relay.gmail.com:587` or `smtp.gmail.com:587`.
+This postfix is for gmail(xoauth2).
+
+Postfix will send mail via `smtp-relay.gmail.com:587` or `smtp.gmail.com:587` by smart relay.
+
 ## usage 
 
 ```sh
