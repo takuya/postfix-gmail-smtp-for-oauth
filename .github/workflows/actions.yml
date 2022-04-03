@@ -9,7 +9,7 @@ jobs:
   build_and_push:
     runs-on: ubuntu-latest
     env:
-      IMAGE_NAME: takuya/postfix-gmail:latest
+      IMAGE_NAME: takuya/postfix-gmail
     steps:
       - name: checkout
         uses: actions/checkout@v2
