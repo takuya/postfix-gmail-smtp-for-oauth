@@ -22,12 +22,14 @@ if use a general gmail account, change  it to `smtp.gmail.com`.
 
 
 
-## build 
-
+## build and run 
 ```shell
 cd docker-build
 IMAGE=takuya/postfix-gmail:latest
-docker build -t $IMAGE . 
+docker build -t $IMAGE .
+##
+docker run -p 25:25 $IMAGE 
+
 ```
 
 ## bases on 
