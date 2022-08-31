@@ -25,6 +25,7 @@ chown -R postfix:postfix /var/spool/postfix/etc/tokens/ && \
 echo "Postfix prepare -- done"
 
 COPY postfix.sh /opt/postfix.sh
+RUN chmod +x /opt/postfix.sh
 ENV TZ Asia/Tokyo
 EXPOSE 25/tcp
 CMD /opt/postfix.sh

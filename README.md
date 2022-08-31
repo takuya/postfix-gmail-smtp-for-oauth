@@ -13,6 +13,9 @@ Postfix will send mail via `smtp-relay.gmail.com:587` or `smtp.gmail.com:587` by
 vim docker-build/etc/sasl-xoauth2.conf
 ## enter sender's access_token and refresh_token
 vim docker-build/etc/tokens/sender.tokens.json
+## enter mailaddress my own
+MY_MAIL=example@gmail.example.com
+sed -i "s|yourmail@example.com|$MY_MAIL|" docker-build/etc/postfix/sasl_passwd
 ./start.sh
 ```
 
@@ -21,6 +24,14 @@ vim docker-build/etc/tokens/sender.tokens.json
 In `sasl_passwd`, config is `smtp-relay.gmail.com` , restricted to google workspace user.
 
 if use a general gmail account, change  it to `smtp.gmail.com`.
+
+```sh
+## for general gmail not gsuite
+sed -i 's|smtp-relay.gmail.com|smtp.gmail.com|' docker-build/etc/postfix/sasl_passwd
+sed -i 's|smtp-relay.gmail.com|smtp.gmail.com|' docker-build/etc/postfix/main.cf
+## for gsuite
+## do nothing .
+```
 
 
 
