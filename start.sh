@@ -8,7 +8,7 @@ NAME=xoauth-postfix
 base_dir=$DIR
 data_dir=$DIR/data
 
-PORT_PUBLISH=25252
+PORT_PUBLISH=127.0.0.1:25252
 ## ENV
 ENV_FILE=$base_dir/docker-env
 ## vol
