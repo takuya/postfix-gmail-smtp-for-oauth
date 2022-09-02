@@ -33,6 +33,11 @@ sed -i 's|smtp-relay.gmail.com|smtp.gmail.com|' docker-build/etc/postfix/main.cf
 ## do nothing .
 ```
 
+## client secret / refresh token required.
+
+`client secret` from google cloud console 
+
+refresh token from oauth
 
 
 ## build and run 
